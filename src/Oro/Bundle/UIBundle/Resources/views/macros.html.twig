@@ -1158,7 +1158,7 @@
     {% import _self as UIMacro %}
 
     {% set cols = subblocks|length %}
-    <div class="responsive-section"{% if options.initSectionInstantly is defined and options.initSectionInstantly %} data-init-section-instantly{% endif %}>
+    <div class="responsive-section"{% if options.initSectionInstantly is defined and options.initSectionInstantly %} data-init-section-instantly{% endif %}{% if options.hidden is defined and options.hidden %} hidden{% endif %}>
         <h4 class="scrollspy-title">{{ title }}{% if headerLinkContent is defined %}{{ headerLinkContent }}{% endif %}</h4>
         <div id="{{ blockId }}" class="scrollspy-nav-target"></div>
         <div class="section-content">
